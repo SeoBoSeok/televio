@@ -1,5 +1,5 @@
 <?php
-include_once('./_common.php');
+include_once ('../common.php');
 include_once(G5_LIB_PATH.'/mailer.lib.php');
 
 mailer("test", "evio_dochwimarket@naver.com", "evio_dochwimarket@naver.com", "subject", "content", 1);

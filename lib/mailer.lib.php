@@ -29,8 +29,13 @@ function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc=
         if (defined('G5_SMTP') && G5_SMTP) {
             $mail->IsSMTP(); // telling the class to use SMTP
             $mail->Host = G5_SMTP; // SMTP server
-            if(defined('G5_SMTP_PORT') && G5_SMTP_PORT)
+            if(defined('G5_SMTP_PORT') && G5_SMTP_PORT) {
                 $mail->Port = G5_SMTP_PORT;
+                $mail->SMTPSecure = "ssl";
+                $mail->SMTPAuth = true;
+                $mail->Username = G5_SMTP_USER;
+                $mail->Password = G5_SMTP_P;
+            }
         }
         $mail->CharSet = 'UTF-8';
         $mail->From = $fmail;
