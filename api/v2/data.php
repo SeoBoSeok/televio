@@ -84,4 +84,4 @@ curl_setopt($ch, CURLOPT_POST, true);
 $response = curl_exec($ch);
 curl_close($ch);
  
-return $response;
+echo $response;
