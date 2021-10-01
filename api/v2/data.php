@@ -31,6 +31,6 @@ if (!empty($json)) {
 
 // curl -d '{ "createAt":"2021-10-01_12-35-16.233355", "id":"id", "shape":"PlateShape.halfRoundRect", "width":130.0, "height":30.0, "title":"010.9792.1006", "titleSize":30.0, "subtitle":"PLEASE CONTACT THIS NUMBER", "subtitleSize":12.0, "plateSubtitlePosition":"PlateSubtitlePosition.top", "fontTitle":"Noto Sans", "fontSubtitle":"Noto Sans", "textColor":"ffffff", "backgroundColor":"005a99", "backgroundAsset":null }' -H "Content-Type: application/json" -X POST https://pamforest.com/api/v1/data.php
 
-$myfile = fopen("data.json", "w") or die("Unable to open file!");
+$myfile = fopen("./data.json", "w") or die("Unable to open file!");
 fwrite($myfile, $json);
 fclose($myfile);
