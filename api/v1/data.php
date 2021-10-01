@@ -7,7 +7,7 @@ include_once(G5_LIB_PATH.'/mailer.lib.php');
 // echo '1111';
 // print_r( $_POST);
 
-$json = $_POST['data'];
+$json = $_POST;
 // // echo $json;
 
 $return = array();
