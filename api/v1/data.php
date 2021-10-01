@@ -7,7 +7,13 @@ $json = $_POST;
 
 $return = array();
 
-$return["result"] = "success";
-$return["data"] = $json;
+if ($json) {
+  $return["result"] = "success";
+  $return["data"] = $json;
+  
+  echo json_encode( $return );
+} else {
+  $return["result"] = "fail";
 
-echo json_encode( $return );
+  echo json_encode ( $return );
+}
