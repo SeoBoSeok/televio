@@ -5,20 +5,20 @@ include_once(G5_LIB_PATH.'/mailer.lib.php');
 $result = $_REQUEST;
 // echo $_GET;
 // echo '1111';
-// echo $_POST;
+echo $_POST;
 
-$json = $_POST['data'];
-// echo $json;
+// $json = $_POST['data'];
+// // echo $json;
 
-$return = array();
+// $return = array();
 
-if ($json) {
-  $return["result"] = "success";
-  $return["data"] = $json;
+// if ($json) {
+//   $return["result"] = "success";
+//   $return["data"] = $json;
   
-  echo json_encode( $return );
-} else {
-  $return["result"] = "fail";
+//   echo json_encode( $return );
+// } else {
+//   $return["result"] = "fail";
 
-  echo json_encode ( $return );
-}
+//   echo json_encode ( $return );
+// }
