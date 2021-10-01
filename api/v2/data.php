@@ -24,7 +24,7 @@ $return = array();
 //   echo json_encode ( $return );
 // }
 
-echo json_decode($json);
+echo json_decode($json, true);
 
 $return["result"] = "success";
 // $return["data"] = $json;
